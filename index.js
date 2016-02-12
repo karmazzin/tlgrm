@@ -1,5 +1,5 @@
 var TelegramBotApi = require('node-telegram-bot-api');
-var bot = new TelegramBotApi(process.env.TLGRM_TOKEN);
+var bot = new TelegramBotApi(process.env.TLGRM_TOKEN, { port: process.env.PORT });
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
