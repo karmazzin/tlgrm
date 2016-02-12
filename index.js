@@ -1,6 +1,6 @@
 var TelegramBotApi = require('node-telegram-bot-api');
 var bot = new TelegramBotApi(process.env.TLGRM_TOKEN, {polling: true, port: process.env.PORT});
-
+console.log(process.env.PORT)
 bot.onText(/\/cat(.*)/, function (msg, match) {
     var fromId = msg.from.id;
     var photo = 'cat.jpg';
